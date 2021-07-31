@@ -201,7 +201,7 @@ open_close_2.TextSize = 20.000
 
 -- Scripts:
 
-local function IMPT_fake_script() -- remove_doors.LocalScript 
+local function OBWPCL_fake_script() -- remove_doors.LocalScript 
 	local script = Instance.new('LocalScript', remove_doors)
 
 	function do_stuff()
@@ -210,13 +210,21 @@ local function IMPT_fake_script() -- remove_doors.LocalScript
 				v:Remove()
 			end
 		end
+		
+		for i,v in pairs(workspace.Lockers:GetChildren()) do
+			for j,w in pairs(v:GetChildren()) do
+				if string.match(w.Name:lower(), "door") then
+					w:Remove()
+				end
+			end
+		end
 	end
 	
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(IMPT_fake_script)()
-local function NAMM_fake_script() -- vip_room_tp.LocalScript 
+coroutine.wrap(OBWPCL_fake_script)()
+local function GLZG_fake_script() -- vip_room_tp.LocalScript 
 	local script = Instance.new('LocalScript', vip_room_tp)
 
 	function do_stuff()
@@ -226,8 +234,8 @@ local function NAMM_fake_script() -- vip_room_tp.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(NAMM_fake_script)()
-local function TCCDVUX_fake_script() -- random_virus.LocalScript 
+coroutine.wrap(GLZG_fake_script)()
+local function KTRQGRR_fake_script() -- random_virus.LocalScript 
 	local script = Instance.new('LocalScript', random_virus)
 
 	function do_stuff()
@@ -249,8 +257,8 @@ local function TCCDVUX_fake_script() -- random_virus.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(TCCDVUX_fake_script)()
-local function XMMCMLG_fake_script() -- lab_teleport.LocalScript 
+coroutine.wrap(KTRQGRR_fake_script)()
+local function JWYTFJ_fake_script() -- lab_teleport.LocalScript 
 	local script = Instance.new('LocalScript', lab_teleport)
 
 	function do_stuff()
@@ -273,8 +281,8 @@ local function XMMCMLG_fake_script() -- lab_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(XMMCMLG_fake_script)()
-local function XQIF_fake_script() -- Dev_room_teleport.LocalScript 
+coroutine.wrap(JWYTFJ_fake_script)()
+local function KFBSM_fake_script() -- Dev_room_teleport.LocalScript 
 	local script = Instance.new('LocalScript', Dev_room_teleport)
 
 	function do_stuff()
@@ -284,8 +292,8 @@ local function XQIF_fake_script() -- Dev_room_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(XQIF_fake_script)()
-local function JYIYCS_fake_script() -- research_teleport.LocalScript 
+coroutine.wrap(KFBSM_fake_script)()
+local function XIDEHP_fake_script() -- research_teleport.LocalScript 
 	local script = Instance.new('LocalScript', research_teleport)
 
 	function do_stuff()
@@ -295,8 +303,8 @@ local function JYIYCS_fake_script() -- research_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(JYIYCS_fake_script)()
-local function PSRMCG_fake_script() -- virus_teleport.LocalScript 
+coroutine.wrap(XIDEHP_fake_script)()
+local function VITE_fake_script() -- virus_teleport.LocalScript 
 	local script = Instance.new('LocalScript', virus_teleport)
 
 	function do_stuff()
@@ -306,8 +314,8 @@ local function PSRMCG_fake_script() -- virus_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(PSRMCG_fake_script)()
-local function FMNCQU_fake_script() -- virus_storage_teleport.LocalScript 
+coroutine.wrap(VITE_fake_script)()
+local function ZEEII_fake_script() -- virus_storage_teleport.LocalScript 
 	local script = Instance.new('LocalScript', virus_storage_teleport)
 
 	function do_stuff()
@@ -317,8 +325,8 @@ local function FMNCQU_fake_script() -- virus_storage_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(FMNCQU_fake_script)()
-local function HVZZ_fake_script() -- healing_virus.LocalScript 
+coroutine.wrap(ZEEII_fake_script)()
+local function IZNSPCN_fake_script() -- healing_virus.LocalScript 
 	local script = Instance.new('LocalScript', healing_virus)
 
 	function do_stuff()
@@ -340,8 +348,8 @@ local function HVZZ_fake_script() -- healing_virus.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(HVZZ_fake_script)()
-local function SOXF_fake_script() -- open_close_2.LocalScript 
+coroutine.wrap(IZNSPCN_fake_script)()
+local function TAHCTS_fake_script() -- open_close_2.LocalScript 
 	local script = Instance.new('LocalScript', open_close_2)
 
 	function do_stuff()
@@ -357,4 +365,4 @@ local function SOXF_fake_script() -- open_close_2.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(SOXF_fake_script)()
+coroutine.wrap(TAHCTS_fake_script)()
