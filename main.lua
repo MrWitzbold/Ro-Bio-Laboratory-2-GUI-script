@@ -273,7 +273,7 @@ local function JGRGAZ_fake_script() -- remove_doors.LocalScript
 		for i,v in pairs(workspace.Lockers:GetChildren()) do
 			for j,w in pairs(v:GetChildren()) do
 				if string.match(w.Name:lower(), "door") then
-					w.Transparency = 0
+					w.Transparency = 1
 					w.CanCollide = false
 				end
 			end
