@@ -12,6 +12,10 @@ local virus_teleport = Instance.new("TextButton")
 local virus_storage_teleport = Instance.new("TextButton")
 local healing_virus = Instance.new("TextButton")
 local Credits = Instance.new("TextLabel")
+local remove_sounds = Instance.new("TextButton")
+local music_1 = Instance.new("TextButton")
+local music_2 = Instance.new("TextButton")
+local stop_songs = Instance.new("TextButton")
 local open_close = Instance.new("Frame")
 local open_close_2 = Instance.new("TextButton")
 
@@ -181,6 +185,61 @@ Credits.Text = "JUKjacker"
 Credits.TextColor3 = Color3.fromRGB(1, 0, 89)
 Credits.TextSize = 50.000
 
+remove_sounds.Name = "remove_sounds"
+remove_sounds.Parent = main
+remove_sounds.BackgroundColor3 = Color3.fromRGB(76, 173, 123)
+remove_sounds.BorderColor3 = Color3.fromRGB(27, 42, 53)
+remove_sounds.BorderSizePixel = 0
+remove_sounds.Position = UDim2.new(0, 0, 0.509551287, 0)
+remove_sounds.Size = UDim2.new(0, 150, 0, 40)
+remove_sounds.Font = Enum.Font.SourceSans
+remove_sounds.Text = "Disable game's obnoxious music"
+remove_sounds.TextColor3 = Color3.fromRGB(0, 0, 0)
+remove_sounds.TextScaled = true
+remove_sounds.TextSize = 20.000
+remove_sounds.TextWrapped = true
+
+music_1.Name = "music_1"
+music_1.Parent = main
+music_1.BackgroundColor3 = Color3.fromRGB(77, 182, 80)
+music_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
+music_1.BorderSizePixel = 0
+music_1.Position = UDim2.new(0, 0, 0.627948701, 0)
+music_1.Size = UDim2.new(0, 150, 0, 40)
+music_1.Font = Enum.Font.SourceSans
+music_1.Text = "Music 1"
+music_1.TextColor3 = Color3.fromRGB(0, 0, 0)
+music_1.TextScaled = true
+music_1.TextSize = 20.000
+music_1.TextWrapped = true
+
+music_2.Name = "music_2"
+music_2.Parent = main
+music_2.BackgroundColor3 = Color3.fromRGB(77, 182, 80)
+music_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+music_2.BorderSizePixel = 0
+music_2.Position = UDim2.new(0, 0, 0.747948706, 0)
+music_2.Size = UDim2.new(0, 150, 0, 40)
+music_2.Font = Enum.Font.SourceSans
+music_2.Text = "Music 2"
+music_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+music_2.TextScaled = true
+music_2.TextSize = 20.000
+music_2.TextWrapped = true
+
+stop_songs.Name = "stop_songs"
+stop_songs.Parent = main
+stop_songs.BackgroundColor3 = Color3.fromRGB(182, 117, 43)
+stop_songs.BorderColor3 = Color3.fromRGB(27, 42, 53)
+stop_songs.BorderSizePixel = 0
+stop_songs.Position = UDim2.new(0, 0, 0.915448785, 0)
+stop_songs.Size = UDim2.new(0, 78, 0, 33)
+stop_songs.Font = Enum.Font.SourceSans
+stop_songs.Text = "Stop songs"
+stop_songs.TextColor3 = Color3.fromRGB(0, 0, 0)
+stop_songs.TextSize = 20.000
+stop_songs.TextWrapped = true
+
 open_close.Name = "open_close"
 open_close.Parent = h4x
 open_close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -201,7 +260,7 @@ open_close_2.TextSize = 20.000
 
 -- Scripts:
 
-local function OBWPCL_fake_script() -- remove_doors.LocalScript 
+local function JGRGAZ_fake_script() -- remove_doors.LocalScript 
 	local script = Instance.new('LocalScript', remove_doors)
 
 	function do_stuff()
@@ -214,7 +273,8 @@ local function OBWPCL_fake_script() -- remove_doors.LocalScript
 		for i,v in pairs(workspace.Lockers:GetChildren()) do
 			for j,w in pairs(v:GetChildren()) do
 				if string.match(w.Name:lower(), "door") then
-					w:Remove()
+					w.Transparency = 0
+					w.CanCollide = false
 				end
 			end
 		end
@@ -223,8 +283,8 @@ local function OBWPCL_fake_script() -- remove_doors.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(OBWPCL_fake_script)()
-local function GLZG_fake_script() -- vip_room_tp.LocalScript 
+coroutine.wrap(JGRGAZ_fake_script)()
+local function DMOBUT_fake_script() -- vip_room_tp.LocalScript 
 	local script = Instance.new('LocalScript', vip_room_tp)
 
 	function do_stuff()
@@ -234,8 +294,8 @@ local function GLZG_fake_script() -- vip_room_tp.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(GLZG_fake_script)()
-local function KTRQGRR_fake_script() -- random_virus.LocalScript 
+coroutine.wrap(DMOBUT_fake_script)()
+local function JNCNZ_fake_script() -- random_virus.LocalScript 
 	local script = Instance.new('LocalScript', random_virus)
 
 	function do_stuff()
@@ -257,8 +317,8 @@ local function KTRQGRR_fake_script() -- random_virus.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(KTRQGRR_fake_script)()
-local function JWYTFJ_fake_script() -- lab_teleport.LocalScript 
+coroutine.wrap(JNCNZ_fake_script)()
+local function TQNOB_fake_script() -- lab_teleport.LocalScript 
 	local script = Instance.new('LocalScript', lab_teleport)
 
 	function do_stuff()
@@ -281,8 +341,8 @@ local function JWYTFJ_fake_script() -- lab_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(JWYTFJ_fake_script)()
-local function KFBSM_fake_script() -- Dev_room_teleport.LocalScript 
+coroutine.wrap(TQNOB_fake_script)()
+local function TDGJRGH_fake_script() -- Dev_room_teleport.LocalScript 
 	local script = Instance.new('LocalScript', Dev_room_teleport)
 
 	function do_stuff()
@@ -292,8 +352,8 @@ local function KFBSM_fake_script() -- Dev_room_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(KFBSM_fake_script)()
-local function XIDEHP_fake_script() -- research_teleport.LocalScript 
+coroutine.wrap(TDGJRGH_fake_script)()
+local function IBSAEM_fake_script() -- research_teleport.LocalScript 
 	local script = Instance.new('LocalScript', research_teleport)
 
 	function do_stuff()
@@ -303,8 +363,8 @@ local function XIDEHP_fake_script() -- research_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(XIDEHP_fake_script)()
-local function VITE_fake_script() -- virus_teleport.LocalScript 
+coroutine.wrap(IBSAEM_fake_script)()
+local function ETHERU_fake_script() -- virus_teleport.LocalScript 
 	local script = Instance.new('LocalScript', virus_teleport)
 
 	function do_stuff()
@@ -314,8 +374,8 @@ local function VITE_fake_script() -- virus_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(VITE_fake_script)()
-local function ZEEII_fake_script() -- virus_storage_teleport.LocalScript 
+coroutine.wrap(ETHERU_fake_script)()
+local function QHUCJF_fake_script() -- virus_storage_teleport.LocalScript 
 	local script = Instance.new('LocalScript', virus_storage_teleport)
 
 	function do_stuff()
@@ -325,8 +385,8 @@ local function ZEEII_fake_script() -- virus_storage_teleport.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(ZEEII_fake_script)()
-local function IZNSPCN_fake_script() -- healing_virus.LocalScript 
+coroutine.wrap(QHUCJF_fake_script)()
+local function YGZACX_fake_script() -- healing_virus.LocalScript 
 	local script = Instance.new('LocalScript', healing_virus)
 
 	function do_stuff()
@@ -348,8 +408,68 @@ local function IZNSPCN_fake_script() -- healing_virus.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(IZNSPCN_fake_script)()
-local function TAHCTS_fake_script() -- open_close_2.LocalScript 
+coroutine.wrap(YGZACX_fake_script)()
+local function HIAGNLQ_fake_script() -- remove_sounds.LocalScript 
+	local script = Instance.new('LocalScript', remove_sounds)
+
+	function do_stuff()
+		workspace["Classic Radio"]:Remove()
+	end
+	
+	script.Parent.MouseButton1Click:Connect(do_stuff)
+	
+end
+coroutine.wrap(HIAGNLQ_fake_script)()
+local function ZPTN_fake_script() -- music_1.LocalScript 
+	local script = Instance.new('LocalScript', music_1)
+
+	function do_stuff()
+		local music = Instance.new("Sound")
+		music.Parent = workspace
+		music.SoundId = "rbxassetid://6665234911"
+		music.Volume = 10
+		music.Looped = true
+		music.Name = "music"
+		music:Play()
+	end
+	
+	script.Parent.MouseButton1Click:Connect(do_stuff)
+	
+end
+coroutine.wrap(ZPTN_fake_script)()
+local function BMUSRV_fake_script() -- music_2.LocalScript 
+	local script = Instance.new('LocalScript', music_2)
+
+	function do_stuff()
+		local music = Instance.new("Sound")
+		music.Parent = workspace
+		music.SoundId = "rbxassetid://5998819632"
+		music.Volume = 10
+		music.Looped = true
+		music.Name = "music"
+		music:Play()
+	end
+	
+	script.Parent.MouseButton1Click:Connect(do_stuff)
+	
+end
+coroutine.wrap(BMUSRV_fake_script)()
+local function HRULG_fake_script() -- stop_songs.LocalScript 
+	local script = Instance.new('LocalScript', stop_songs)
+
+	function do_stuff()
+		for i,v in pairs(workspace:GetChildren()) do
+			if v.Name == "music" then
+				v:Remove()
+			end
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(do_stuff)
+	
+end
+coroutine.wrap(HRULG_fake_script)()
+local function EFKOE_fake_script() -- open_close_2.LocalScript 
 	local script = Instance.new('LocalScript', open_close_2)
 
 	function do_stuff()
@@ -365,4 +485,4 @@ local function TAHCTS_fake_script() -- open_close_2.LocalScript
 	script.Parent.MouseButton1Click:Connect(do_stuff)
 	
 end
-coroutine.wrap(TAHCTS_fake_script)()
+coroutine.wrap(EFKOE_fake_script)()
